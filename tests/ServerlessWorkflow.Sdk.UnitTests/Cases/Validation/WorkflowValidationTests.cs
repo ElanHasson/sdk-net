@@ -43,7 +43,7 @@ public class WorkflowValidationTests
             .WithDescription("Fake Workflow Description")
             .UseSpecVersion(ServerlessWorkflowSpecVersion.Latest)
             .WithVersion("1.0.0")
-            .UseExtension("fake-extension", new($"file://{Path.Combine(AppContext.BaseDirectory, "Assets", "WorkflowExtensions", "condition-state-type.json")}"))
+            .UseExtension("fake-extension", new($"file:///{Path.Combine(AppContext.BaseDirectory, "Assets", "workflowExtensions", "condition-state-type.json")}"))
             .StartsWith("fake-state", flow => flow
                 .Extension("condition")
                 .WithExtensionProperty("if", new { condition = "${ true }", action = new { name = "fake", functionRef = new FunctionReference() { RefName = "fake-function" } } })
@@ -70,7 +70,7 @@ public class WorkflowValidationTests
             .WithDescription("Fake Workflow Description")
             .UseSpecVersion(ServerlessWorkflowSpecVersion.Latest)
             .WithVersion("1.0.0")
-            .UseExtension("fake-extension", new($"file://{Path.Combine(AppContext.BaseDirectory, "Assets", "WorkflowExtensions", "greet-function-type.json")}"))
+            .UseExtension("fake-extension", new($"file:///{Path.Combine(AppContext.BaseDirectory, "Assets", "workflowExtensions", "greet-function-type.json")}"))
             .StartsWith("fake-state", flow => flow
                 .Execute(action => action
                     .Invoke(function => function

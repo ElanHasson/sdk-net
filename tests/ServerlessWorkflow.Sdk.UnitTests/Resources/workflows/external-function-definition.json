@@ -3,7 +3,7 @@
   "name": "Undefined",
   "version": "0.1.0",
   "specVersion": "0.8",
-  "functions": "file://resources/functions/petstore.json",
+  "functions": "file:///Resources/functions/petstore.json",
   "states": [
     {
       "name": "Test",

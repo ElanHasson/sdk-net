@@ -3,7 +3,7 @@
   "name": "flow-with-input-data",
   "version": "0.1.0",
   "specVersion": "0.8",
-  "dataInputSchema": "file://resources/dataschemas/input-data-schema.json",
+  "dataInputSchema": "file:///Resources/dataschemas/input-data-schema.json",
   "states": [
     {
       "name": "inject",
